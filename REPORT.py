@@ -61,7 +61,7 @@ def main(max_reps=15, time_s=1200):
         m = solver.model()
         pw = tuple(m.eval(p).as_long() for p in pairs)
         xw = tuple(1 if bool(m.eval(x, model_completion=True)) else 0 for x in flips)
-        can = g6.canonical_px(pw, xw)
+        can = g6.canonical_c6(pw, xw)   # use C6 canonical form; D6 (reflections) breaks optimality
         if can in canonical_set:
             solver.add(image_clauses(g6, can, pairs, flips))
             continue

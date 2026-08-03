@@ -1,0 +1,8 @@
+{
+  "step4": {
+    "A_slice_unsat_under_pinned_pair_assignment": "unsat",
+    "B_reference_dfs_best_penalty": 6014,
+    "B_reference_dfs_states": 200128,
+    "conclusion": "The fixed-pair 2^135 orientation slice is UNSAT for optimal penalty 6.0 (Z3 direct check), and the actual DFS run does not reach 6.0 within 200k states.  Therefore the DFS generator's image contains no optimal orbit representative; it is orbit-incomplete."
+  }
+}

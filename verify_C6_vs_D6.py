@@ -32,6 +32,7 @@ def main(path="output/orbit_reps_report.json", n=5):
         p, x = tuple(rec["canon_p"]), tuple(rec["canon_x"])
         vals = from_px(grid, p, x)
         pen0 = measure(vals, grid).penalty
+        # the canonical writer verified this already; assert just in case
         assert abs(pen0 - 6.0) < 1e-9, pen0
 
         rot_vals = {}
@@ -46,7 +47,5 @@ def main(path="output/orbit_reps_report.json", n=5):
 
         print(f"{rec['orbit']:2d} | {pen0:5.1f} | {pen_rot:5.1f} | {pen_ref:5.1f} | "
               f"rot {'OK' if pen_rot <= 6.0 else 'FAIL'}, ref {'OK' if pen_ref <= 6.0 else 'FAIL'}")
-
-
 if __name__ == "__main__":
     main()
