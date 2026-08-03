@@ -1,0 +1,15 @@
+name = "nakseo_proof"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["NakseoProof"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+maxSynthPendingDepth = 3
+
+# NOTE: mathlib removed — the spec is standalone Lean 4 (Init + Lean only).
+# Requiring mathlib4 pulls 10-15 GB of .ltar binaries; not needed here.
+
+[[lean_lib]]
+name = "NakseoProof"
